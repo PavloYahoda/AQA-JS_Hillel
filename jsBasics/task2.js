@@ -1,6 +1,6 @@
 import {averageGrade} from './data.js';
 
-function printAverageGrade(value){
+export function printAverageGrade(value){
     switch(true){
         case(value == null || isNaN(value) || value < 0 || value > 100):
             console.log(`Не корректне значення: ${value}. Допустимий інтервал - числа від 0 до 100`);
