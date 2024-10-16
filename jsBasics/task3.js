@@ -1,36 +1,15 @@
-import readline from 'readline';
+function checkOrder (available, ordered){
+  if (available < ordered){
+    console.log("Your order is too large, we don’t have enough goods.");
+    return;
+  }
+  if (ordered === 0){
+    console.log("Your order is empty");
+    return;
+  }
+  console.log("Your order is accepted");
+}
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.question('Введіть ціле число, для якого потрібно вивести таблицю множення: ', (value) => {
-  
-    const userInput = Number(value);
-    
-    if (isNaN(userInput)) {
-      console.log(`Помилка: "${value}" не є числом. Будь ласка, введіть ціле число.`);
-    } else if (!Number.isInteger(userInput)) {
-      console.log(`Помилка: "${value}" не є цілим числом. Будь ласка, введіть ціле число.`);
-    } else {
-      printMultiplicationTable(userInput);
-    }  
-    
-    rl.close();
-});
-
-function printMultiplicationTable(value){
-    if (value > 0 && value <=5){
-        for(let i = 0; i <=10; i++){
-            console.log(`${value} x ${i} = ${value * i}`);
-        }
-    }else{
-        let i = 0;
-        while(i <= 10){
-            console.log(`${value} x ${i} = ${value * i}`);
-            i++;
-        }
-    }
-};
-
+checkOrder(10, 15);
+checkOrder(10, 0);
+checkOrder(10, 4);
