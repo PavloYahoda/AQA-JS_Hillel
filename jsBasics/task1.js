@@ -1,5 +1,5 @@
 //function declaration
-function calculateRectangleArea(width, height){
+export function calculateRectangleArea(width, height){
   return width * height;
 }
 
