@@ -1,17 +1,35 @@
-import { calculateRectangleArea } from "./task1"; 
+function divide(numerator, denominator){
+  if (isNaN(numerator) || isNaN(denominator)){
+    throw new Error("Numerator or denominator is not a number!");
+  }
 
-function checkOrder (available, ordered){
-  if (available < ordered){
-    console.log("Your order is too large, we don’t have enough goods.");
-    return;
+  if (denominator === 0){
+    throw new Error("Divide by zero!");
   }
-  if (ordered === 0){
-    console.log("Your order is empty");
-    return;
-  }
-  console.log("Your order is accepted");
+  
+  return console.log((numerator/denominator).toFixed(2));
 }
 
-checkOrder(10, calculateRectangleArea(5, 10));
-checkOrder(10, 0);
-checkOrder(10, 4);
+try {
+  divide("www", 8);
+} catch (error) {
+  console.error(error.message);
+}finally{
+  console.log("Completed successfully!");
+}
+
+try {
+  divide(5.23, 0);
+} catch (error) {
+  console.error(error.message);
+}finally{
+  console.log("Completed successfully!");
+}
+
+try {
+  divide(5.23, 8);
+} catch (error) {
+  console.error(error.message);
+}finally{
+  console.log("Completed successfully!");
+}

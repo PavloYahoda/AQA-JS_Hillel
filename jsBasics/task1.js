@@ -1,17 +1,39 @@
-//function declaration
-export function calculateRectangleArea(width, height){
-  return width * height;
+import readline from 'readline';
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Enter an integer: ', (value) => {
+  const num = Number(value);
+
+  handleNum(num, printIfEven, printIfOdd);
+
+  rl.close();
+});
+
+function handleNum (number, callbackForEven, callbackForOdd){
+  if (isNaN(number)) {
+    console.log(`It is not a number. Enter a number, please.`);
+    return;
+  }  
+  if (!Number.isInteger(number)) {
+    console.log(`It is not an integer. Enter an integer, please.`);
+    return;
+  }
+  if(number%2 === 0){
+    callbackForEven(number);
+    return;
+  }
+  if(number%2 !== 0){
+    callbackForOdd(number);
+    return;
+  }
 }
 
-//function expression
-let rectangleArea = function (width, height) {
-  return width * height;
-}
+const printIfEven = (number) => console.log(`${number} is even`);
 
-//arrow function
-let rectangleArea2 = (width, height) => width * height;
+const printIfOdd = (number) => console.log(`${number} is odd`);
 
 
-console.log("function declaration: ", calculateRectangleArea(5, 10));
-console.log("function expression: ", rectangleArea(6, 11));
-console.log("arrow function: ", rectangleArea2(7, 12));

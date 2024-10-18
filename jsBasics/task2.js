@@ -1,12 +1,10 @@
-function checkAge(){
-    for (let i = 0; i < arguments.length; i++) {
-		if (arguments[i] >= 18){
-            console.log("Congratulations, you сan buy some drink");
-        }else{
-            console.log("Sorry, but you should go to bed");
-        }
-        
-	}
+function countdown(num) {
+    if (num < 0) {
+        return; 
+    }
+    
+    console.log(num); 
+    countdown(num - 1);
 }
 
-checkAge(10, 18, 25);
+countdown(5)
