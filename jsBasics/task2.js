@@ -1,10 +1,17 @@
-function countdown(num) {
-    if (num < 0) {
+function countdown(n) {
+    if (n < 0) {
         return; 
     }
     
-    console.log(num); 
-    countdown(num - 1);
+    console.log(n); 
+    countdown(n - 1);
 }
 
-countdown(5)
+function callCoutdownForArray(...numbers){
+    numbers.forEach(num => {
+        countdown(num);
+        console.log("************");
+    });
+}
+
+callCoutdownForArray(5, 3, 8);
