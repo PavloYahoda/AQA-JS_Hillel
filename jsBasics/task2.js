@@ -7,11 +7,11 @@ function countdown(n) {
     countdown(n - 1);
 }
 
-function callCoutdownForArray(...numbers){
+function callCountdownForArray(...numbers){
     numbers.forEach(num => {
         countdown(num);
         console.log("************");
     });
 }
 
-callCoutdownForArray(5, 3, 8);
+callCountdownForArray(5, 3, 8);
