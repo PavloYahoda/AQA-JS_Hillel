@@ -1,17 +1,5 @@
-function countdown(n) {
-    if (n < 0) {
-        return; 
-    }
-    
-    console.log(n); 
-    countdown(n - 1);
-}
+const array = [1, 2, 3, 4, 5];
 
-function callCountdownForArray(...numbers){
-    numbers.forEach(num => {
-        countdown(num);
-        console.log("************");
-    });
-}
+let newArray = array.map((value, index) => value * index);
 
-callCountdownForArray(5, 3, 8);
+console.log(newArray);

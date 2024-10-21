@@ -1,35 +1,3 @@
-function divide(numerator, denominator){
-  if (isNaN(numerator) || isNaN(denominator)){
-    throw new Error("Numerator or denominator is not a number!");
-  }
-
-  if (denominator === 0){
-    throw new Error("Divide by zero!");
-  }
-  
-  return console.log((numerator/denominator).toFixed(2));
-}
-
-try {
-  divide("www", 8);
-} catch (error) {
-  console.error(error.message);
-}finally{
-  console.log("Completed successfully!");
-}
-
-try {
-  divide(5.23, 0);
-} catch (error) {
-  console.error(error.message);
-}finally{
-  console.log("Completed successfully!");
-}
-
-try {
-  divide(5.23, 8);
-} catch (error) {
-  console.error(error.message);
-}finally{
-  console.log("Completed successfully!");
-}
+const array = [10, 20, 30, 40, 50];
+let sum = array.reduce((temp, value) => temp + value);
+console.log(sum);
