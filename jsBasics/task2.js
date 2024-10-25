@@ -1,5 +1,16 @@
-const array = [1, 2, 3, 4, 5];
+// Створіть об'єкт book з такими властивостями:
+// title: рядок, представляє назву книги.
+// author: рядок, представляє автора книги.
+// year: число, представляє рік видання книги.
+// Деструктуризуйте назву та автора книги з об'єкта book.
+// Виведіть деструктуризовані змінні в консоль
 
-let newArray = array.map((value, index) => value * index);
+let book = {
+    title: "Atlas Shrugged",
+    author: "Ayn Rand",
+    year: "1957",
+}
 
-console.log(newArray);
+const {title, author} = book;
+
+console.log(`${author} \"${title}\"`);

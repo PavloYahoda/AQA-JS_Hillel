@@ -1,23 +1,17 @@
-const numbers = [2, -5, 0, 7, -3, 0, 10, -8]
+// Створіть порожній об'єкт з ім'ям student.
+// Додайте до об'єкта student наступні властивості:
+// firstName: рядок, представляє ім'я студента.
+// lastName: рядок, представляє прізвище студента.
+// age: число, представляє вік студента.
+// courses: масив, представляє список курсів, які він вивчає (наприклад, ["Математика", "Історія", "Програмування"]).
+// Виведіть об'єкт student в консоль.
 
-let positiveCount = 0, negativeCount = 0, zeroCount = 0;
+let student = new Object();
 
-for (let i = 0; i < numbers.length; i++){
-  switch (true){
-    case(numbers[i] < 0):
-    negativeCount++;
-    break;
-    case(numbers[i] > 0):
-    positiveCount++;
-    break;
-    case(numbers[i] === 0):
-    zeroCount++;
-    break;
-  }
-}
-console.log(`
-Кількість позитивних чисел: ${positiveCount}
-Кількість негативних чисел: ${negativeCount}
-Кількість нульових чисел: ${zeroCount}
-`);
+student.firstName = "Jack";
+student.lastName = "Black";
+student.age = 39;
+student.courses = ["Math", "History", "Programming"];
+
+console.log(student);
 
