@@ -1,17 +1,54 @@
-// Створіть порожній об'єкт з ім'ям student.
-// Додайте до об'єкта student наступні властивості:
-// firstName: рядок, представляє ім'я студента.
-// lastName: рядок, представляє прізвище студента.
-// age: число, представляє вік студента.
-// courses: масив, представляє список курсів, які він вивчає (наприклад, ["Математика", "Історія", "Програмування"]).
-// Виведіть об'єкт student в консоль.
+import { Book } from './Book.js';
+import { EBook } from './EBook.js';
+import { BookWithProtectedProperties } from './newBook.js';
+import { EBookWithProtectedProperties } from './newEBook.js';
 
-let student = new Object();
+//Subtask 1:
 
-student.firstName = "Jack";
-student.lastName = "Black";
-student.age = 39;
-student.courses = ["Math", "History", "Programming"];
+console.log("*************");
+console.log("No protected properties:");
 
-console.log(student);
+let atlas = new Book("Atlas Shrugged", "Ann Ryan", 1957);
+let go1984 = new Book("Nineteen Eighty-Four", "George Orwell", 1949);
 
+atlas.printInfo();
+go1984.printInfo();
+
+//Subtask 2:
+let deep = new EBook("Labyrinth of reflections", "Serhii Luk'yanenko", 1997, "pdf");
+
+deep.printInfo();
+
+//Subtask 3:
+
+console.log("*************");
+console.log("Protected properties. Validation of setters:");
+
+let protDeep = new EBookWithProtectedProperties("Labyrinth of reflections", "Serhii Luk'yanenko", 1997, "pdf");
+protDeep.title = 1984;
+protDeep.author = 1984;
+protDeep.year = 0;
+protDeep.year = 2025;
+protDeep.format = "abc";
+
+console.log("*************");
+console.log("Protected properties:");
+
+protDeep.title = "Kolobok";
+protDeep.author = "people";
+protDeep.format = "txt";
+console.log(`Title: ${protDeep.title}, author: ${protDeep.author}, format: ${protDeep.format}`);
+
+//Subtask 4:
+
+console.log("*************");
+console.log("static:");
+
+let oldestBook = BookWithProtectedProperties.getOldestBook(atlas, go1984, deep, protDeep);
+console.log(oldestBook);
+
+//Subtask 5:
+
+let deepAsBook = new BookWithProtectedProperties("Labyrinth of reflections", "Serhii Luk'yanenko", 1997);
+let deepAsEBook = EBookWithProtectedProperties.createEBook(deepAsBook, "epub");
+console.log(deepAsEBook);
