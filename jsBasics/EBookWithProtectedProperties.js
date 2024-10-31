@@ -1,4 +1,4 @@
-import { BookWithProtectedProperties } from './newBook.js';
+import { BookWithProtectedProperties } from './BookWithProtectedProperties.js';
 
 export class EBookWithProtectedProperties extends BookWithProtectedProperties {
     constructor(title, author, year, format) {

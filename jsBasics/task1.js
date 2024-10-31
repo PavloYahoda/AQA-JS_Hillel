@@ -1,7 +1,7 @@
 import { Book } from './Book.js';
 import { EBook } from './EBook.js';
-import { BookWithProtectedProperties } from './newBook.js';
-import { EBookWithProtectedProperties } from './newEBook.js';
+import { BookWithProtectedProperties } from './BookWithProtectedProperties.js';
+import { EBookWithProtectedProperties } from './EBookWithProtectedProperties.js';
 
 //Subtask 1:
 
