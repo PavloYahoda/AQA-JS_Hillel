@@ -10,7 +10,7 @@ export default [
   { "rules": {
     "semi": ["error", "always"]
     }
-  }
+  },
   pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
 ];
