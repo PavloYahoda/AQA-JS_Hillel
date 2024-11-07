@@ -49,7 +49,7 @@ export default [
       'no-use-before-define': ['error', { variables: true, functions: false }],
       'prefer-template': 'error',
       'import/prefer-default-export': 'warn',
-      "no-multi-spaces": "error",
+      'no-multi-spaces': 'error',
 
       // React-specific rules
       'react/prop-types': 'warn',
