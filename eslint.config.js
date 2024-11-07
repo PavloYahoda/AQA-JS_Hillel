@@ -30,7 +30,7 @@ export default [
 
     rules: {
       eqeqeq: 'error',
-      'no-console': 'warn',
+      'no-console': 'off',
       'no-debugger': 'warn',
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
