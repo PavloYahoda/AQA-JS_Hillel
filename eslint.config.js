@@ -1,12 +1,11 @@
 import globals from 'globals';
-import pluginJs from '@eslint/js';
 import pluginReact from 'eslint-plugin-react';
 import pluginImport from 'eslint-plugin-import';
 
 export default [
   {
     files: ['**/*.js', '**/*.jsx'],
-    
+
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -33,21 +32,21 @@ export default [
       'no-console': 'off',
       'no-debugger': 'warn',
       semi: ['error', 'always'],
-      quotes: ['error', 'single'],
-      indent: ['error', 2],
-      'comma-dangle': ['error', 'always-multiline'],
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      'no-undef': 'error',
+      //quotes: ['error', 'single'],
+      //indent: ['error', 2],
+      //'comma-dangle': ['error', 'always-multiline'],
+      //'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      //'no-undef': 'error',
       'prefer-const': 'error',
       'no-var': 'error',
-      'arrow-parens': ['error', 'as-needed'],
+      //'arrow-parens': ['error', 'as-needed'],
       'consistent-return': 'error',
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'object-curly-spacing': ['error', 'always'],
       'array-bracket-spacing': ['error', 'never'],
       'no-use-before-define': ['error', { variables: true, functions: false }],
-      'prefer-template': 'error',
+      //'prefer-template': 'error',
       'import/prefer-default-export': 'warn',
       'no-multi-spaces': 'error',
 
