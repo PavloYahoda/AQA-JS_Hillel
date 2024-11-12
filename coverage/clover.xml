@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1731182761788" clover="3.2.0">
-  <project timestamp="1731182761788" name="All files">
+<coverage generated="1731349388727" clover="3.2.0">
+  <project timestamp="1731349388727" name="All files">
     <metrics statements="141" coveredstatements="141" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="148" coveredelements="148" complexity="0" loc="141" ncloc="141" packages="1" files="2" classes="2"/>
     <file name="Helper.js" path="F:\AQA_JS\AQA-JS_Hillel\jsBasics\Helper.js">
       <metrics statements="31" coveredstatements="31" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
