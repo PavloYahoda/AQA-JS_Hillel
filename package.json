@@ -21,6 +21,7 @@
     "format": "prettier --write .",
     "prepare": "husky",
     "lint": "npx eslint --fix .",
-    "test": "jest"
+    "test": "jest",
+    "e2e-test": "npx jest task1_2.test.js"
   }
 }
