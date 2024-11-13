@@ -17,6 +17,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+             npx husky install
 
       - name: Run e2e tests
         run: npx jest jsBasics/tasks1_2.test.js
