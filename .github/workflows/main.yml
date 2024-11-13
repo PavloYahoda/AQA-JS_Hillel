@@ -1,0 +1,23 @@
+name: CI API TESTS
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.17.0'  # Use the Node.js version appropriate for your project
+
+      - name: Install dependencies
+        run: npm install
+             npx husky install
+
+      - name: Run e2e tests
+        run: npx jest jsBasics/tasks1_2.test.js
